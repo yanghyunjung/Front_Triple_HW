@@ -5,13 +5,13 @@ const Box = () => {
   return (
     <Text>
       <DIV1>
-        <span style={{ fontWeight: "750" }}>630만 명</span>의 여행자
+        <span style={{ fontWeight: "730" }}>630만 명</span>의 여행자
       </DIV1>
       <DIV2>
-        <span style={{ fontWeight: "750" }}>95만 개</span>의 여행 리뷰
+        <span style={{ fontWeight: "730" }}>95만 개</span>의 여행 리뷰
       </DIV2>
       <DIV3>
-        <span style={{ fontWeight: "750" }}>425만 개</span>의 여행 일정
+        <span style={{ fontWeight: "730" }}>425만 개</span>의 여행 일정
       </DIV3>
     </Text>
   );
@@ -23,7 +23,7 @@ const Text = styled.div`
   flex-direction: column;
   align-items: flex-start;
   margin-left: 700px;
-  padding-top: 250px;
+  padding-top: 170px;
   color: rgb(58, 58, 58);
   font-family: sans-serif;
   font-size: 36px;
@@ -31,16 +31,16 @@ const Text = styled.div`
 
 const DIV1 = styled.div`
   letter-spacing: -1px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 `;
 
 const DIV2 = styled.div`
   letter-spacing: -1px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 `;
 
 const DIV3 = styled.div`
   letter-spacing: -1px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 `;
 export default Box;

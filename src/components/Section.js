@@ -10,8 +10,22 @@ import TEXT from "../components/Box";
 const section = (props) => {
   return (
     <Container>
-      <TripleLogo src={Triple} delay="0.1" />
-      
+      <LeftImage>
+        <TripleLogo src={Triple} />
+        <span
+          style={{
+            position: "absolute",
+            margin: "430px 0 0 230px",
+            fontFamily: "sans-serif",
+            color: "rgba(58, 58, 58, 0.7)",
+            fontSize: "15px",
+            width: "100px",
+          }}
+        >
+          2021년 5월 기준
+        </span>
+      </LeftImage>
+
       {/* 텍스트 */}
       <TEXT delay="0.2" />
 
@@ -23,7 +37,7 @@ const section = (props) => {
             gridTemplateColumns: "60px 2fr",
             alignItems: "center",
             marginRight: "39px",
-            backgroundImage: "url(../play-store.png)",
+            textAlign: "initial",
           }}
         >
           <StoreLogo src={PlayStore} />
@@ -33,7 +47,8 @@ const section = (props) => {
           style={{
             alignItems: "center",
             display: "grid",
-            gridTemplateColumns: "0 2fr",
+            gridTemplateColumns: "60px 2fr",
+            textAlign: "initial",
           }}
         >
           <AppLogo src={AppStore} />
@@ -47,7 +62,7 @@ const section = (props) => {
 const Slideup = keyframes`
   from {
     opacity: 0;
-    transform: translateY(0px);
+    transform: translateY(10px);
   }
   to {
     opacity: 1;
@@ -61,35 +76,34 @@ const Container = styled.div`
   position: relative;
 `;
 
+const LeftImage = styled.div`
+  animation-duration: 0.7s;
+  animation-timing-function: ease-in;
+  animation-name: ${Slideup};
+  animation-fill-mode: forwards;
+`;
+
 // 좌측 이미지 스타일 지정
 const TripleLogo = styled.img`
   position: absolute;
   width: 400px;
   height: 338px;
-  padding-top: 250px;
-  padding-left: 90px;
-  animation-duration: 0.7s;
-  animation-delay: ${(props) => props.delay}s;
-  animation-timing-function: ease;
-  animation-name: ${Slideup};
-  animation-fill-mode: forwards;
+  padding-top: 170px;
+  padding-left: 80px;
 `;
 
 const Awards = styled.div`
-  display: grid;
-  grid-template-columns: 2fr 2fr;
+  display: flex;
   position: absolute;
-  align-items: center;
-  justify-content: start;
   line-height: 22px;
-  margin: 460px 0px 100px 710px;
+  margin: 380px 0px 100px 700px;
   color: rgba(58, 58, 58, 0.8);
-  font-weight: bold;
+  font-weight: 900;
   font-size: 14px;
   font-family: sans-serif;
   animation-duration: 0.7s;
   animation-delay: ${(props) => props.delay}s;
-  animation-timing-function: ease;
+  animation-timing-function: ease-in;
   animation-name: ${Slideup};
   animation-fill-mode: forwards;
 `;
