@@ -10,6 +10,7 @@ import TEXT from "../components/Box";
 const section = (props) => {
   return (
     <Container>
+      {/* 좌측 이미지 */}
       <LeftImage>
         <TripleLogo src={Triple} />
         <span
@@ -26,8 +27,10 @@ const section = (props) => {
         </span>
       </LeftImage>
 
-      {/* 텍스트 */}
-      <TEXT delay="0.2" />
+      {/* 사용자, 리뷰, 저장 문구 */}
+      <User delay="0.2">
+        <TEXT />
+      </User>
 
       {/* 수상 내역 */}
       <Awards delay="0.3">
@@ -76,6 +79,7 @@ const Container = styled.div`
   position: relative;
 `;
 
+// 좌측 이미지 감싸는 div 애니메이션 적용
 const LeftImage = styled.div`
   animation-duration: 0.7s;
   animation-timing-function: ease-in;
@@ -92,6 +96,15 @@ const TripleLogo = styled.img`
   padding-left: 80px;
 `;
 
+// 사용자, 리뷰, 저장 문구 애니메이션 적용
+const User = styled.div`
+  animation-duration: 0.7s;
+  animation-timing-function: ease-in;
+  animation-name: ${Slideup};
+  animation-fill-mode: forwards;
+`;
+
+// 수상 내역 감싸는 div
 const Awards = styled.div`
   display: flex;
   position: absolute;
