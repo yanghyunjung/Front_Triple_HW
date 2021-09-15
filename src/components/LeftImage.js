@@ -12,7 +12,7 @@ const section = (props) => {
         <span
           style={{
             position: "absolute",
-            margin: "430px 0 0 230px",
+            margin: "450px 0 0 230px",
             fontFamily: "sans-serif",
             color: "rgba(58, 58, 58, 0.7)",
             fontSize: "15px",

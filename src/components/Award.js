@@ -14,6 +14,7 @@ const Award = (props) => {
           alignItems: "center",
           marginRight: "39px",
           textAlign: "initial",
+          lineHeight: "20px",
         }}
       >
         <StoreLogo src={PlayStore} />
@@ -25,6 +26,7 @@ const Award = (props) => {
           display: "grid",
           gridTemplateColumns: "60px 2fr",
           textAlign: "initial",
+          lineHeight: "20px",
         }}
       >
         <AppLogo src={AppStore} />

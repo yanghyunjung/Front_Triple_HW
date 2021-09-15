@@ -1,17 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
-const Box = () => {
+const Box = (props) => {
+  const [count, setCount] = useState({ num_1: 0, num_2: 0, num_3: 0 });
+
+  useEffect(() => {
+    let number = 0;
+    const interval = setInterval(() => {
+      number++;
+      setCount({
+        ...count,
+        num_1: number * 3.15,
+        num_2: number * 0.475,
+        num_3: number * 2.125,
+      });
+      if (number === 200) {
+        return clearInterval(interval);
+      }
+    });
+    return () => clearInterval(interval);
+  }, []);
+
+
   return (
     <Text>
       <DIV1>
-        <span style={{ fontWeight: "730" }}>630만 명</span>의 여행자
+        <span style={{ fontWeight: "730" }}>{parseInt(count.num_1)}만 명</span>의 여행자
       </DIV1>
       <DIV2>
-        <span style={{ fontWeight: "730" }}>95만 개</span>의 여행 리뷰
+        <span style={{ fontWeight: "730" }}>{parseInt(count.num_2)}만 개</span>의 여행 리뷰
       </DIV2>
       <DIV3>
-        <span style={{ fontWeight: "730" }}>425만 개</span>의 여행 일정
+        <span style={{ fontWeight: "730" }}>{parseInt(count.num_3)}만 개</span>의 여행 일정
       </DIV3>
     </Text>
   );
