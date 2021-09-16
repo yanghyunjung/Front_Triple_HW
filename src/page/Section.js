@@ -8,17 +8,17 @@ import AWARD from "../components/Award";
 const section = (props) => {
   return (
     <Container>
-      {/* 좌측 이미지 */}
+      {/* 좌측 이미지 불러오기 */}
       <Left>
         <LeftImg />
       </Left>
 
-      {/* 사용자, 리뷰, 저장 문구 */}
+      {/* 사용자, 리뷰, 저장 문구 불러오기 */}
       <User delay="0.1">
         <USER />
       </User>
 
-      {/* 수상 내역 */}
+      {/* 수상 내역 불러오기 */}
       <Award delay="0.2">
         <AWARD />
       </Award>
@@ -45,7 +45,8 @@ const Container = styled.div`
 
 // 좌측 이미지 애니메이션 적용
 const Left = styled.div`
-  animation-duration: 0.7s;
+  // 애니메이션이 700ms에 걸쳐 일어나게 지정
+  animation-duration: 700ms;
   animation-timing-function: ease-in;
   animation-name: ${Slideup};
   animation-fill-mode: forwards;
@@ -53,7 +54,8 @@ const Left = styled.div`
 
 // 사용자, 리뷰, 저장 문구 애니메이션 적용
 const User = styled.div`
-  animation-duration: 0.7s;
+  // 애니메이션이 700ms에 걸쳐 일어나게 지정
+  animation-duration: 700ms;
   animation-timing-function: ease-in;
   animation-delay: ${(props) => props.delay}s;
   animation-name: ${Slideup};
@@ -63,7 +65,8 @@ const User = styled.div`
 // 수상 내역 애니메이션 적용
 const Award = styled.div`
   position: absolute;
-  animation-duration: 0.7s;
+  // 애니메이션이 700ms에 걸쳐 일어나게 지정
+  animation-duration: 700ms;
   animation-timing-function: ease-in;
   animation-delay: ${(props) => props.delay}s;
   animation-name: ${Slideup};

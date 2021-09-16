@@ -4,6 +4,7 @@ import styled from "styled-components";
 import AppStore from "../images/app-store.png";
 import PlayStore from "../images/play-store.png";
 
+// 수상 내역 컴포넌트 구현
 const Award = (props) => {
   return (
     <Awards>

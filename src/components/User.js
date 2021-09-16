@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
-const Box = (props) => {
+// 사용자, 리뷰, 저장 문구 컴포넌트 구현
+const User = (props) => {
+  // 숫자 증가를 위한 기능구현
   const [count, setCount] = useState({ num_1: 0, num_2: 0, num_3: 0 });
 
   useEffect(() => {
@@ -10,9 +12,9 @@ const Box = (props) => {
       number++;
       setCount({
         ...count,
-        num_1: number * 3.15,
-        num_2: number * 0.475,
-        num_3: number * 2.125,
+        num_1: number * 1.75,
+        num_2: number * 0.105,
+        num_3: number * 3.25,
       });
       if (number === 200) {
         return clearInterval(interval);
@@ -25,13 +27,13 @@ const Box = (props) => {
   return (
     <Text>
       <DIV1>
-        <span style={{ fontWeight: "730" }}>{parseInt(count.num_1)}만 명</span>의 여행자
+        <span style={{ fontWeight: "730" }}>{parseInt(count.num_1)}만 명</span>의 사용자
       </DIV1>
       <DIV2>
-        <span style={{ fontWeight: "730" }}>{parseInt(count.num_2)}만 개</span>의 여행 리뷰
+        <span style={{ fontWeight: "730" }}>{parseInt(count.num_2)}만 개</span>의 리뷰
       </DIV2>
       <DIV3>
-        <span style={{ fontWeight: "730" }}>{parseInt(count.num_3)}만 개</span>의 여행 일정
+        <span style={{ fontWeight: "730" }}>{parseInt(count.num_3)}만 개</span>의 저장
       </DIV3>
     </Text>
   );
@@ -63,4 +65,4 @@ const DIV3 = styled.div`
   letter-spacing: -1px;
   margin-bottom: 15px;
 `;
-export default Box;
+export default User;

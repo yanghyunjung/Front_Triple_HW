@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import Triple from "../images/triple.png";
 
+// 좌측 이미지 컴포넌트 구현
 const section = (props) => {
   return (
     <Container>
@@ -19,7 +20,7 @@ const section = (props) => {
             width: "100px",
           }}
         >
-          2021년 5월 기준
+          2019년 2월 기준
         </span>
       </LeftImage>
     </Container>
