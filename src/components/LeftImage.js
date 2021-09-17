@@ -4,11 +4,11 @@ import styled from "styled-components";
 import Triple from "../images/triple.png";
 
 // 좌측 이미지 컴포넌트 구현
-const section = (props) => {
+const LeftImage = (props) => {
   return (
     <Container>
       {/* 좌측 이미지 */}
-      <LeftImage>
+      <LeftImg>
         <TripleLogo src={Triple} />
         <span
           style={{
@@ -22,7 +22,7 @@ const section = (props) => {
         >
           2019년 2월 기준
         </span>
-      </LeftImage>
+      </LeftImg>
     </Container>
   );
 };
@@ -30,11 +30,10 @@ const section = (props) => {
 const Container = styled.div`
   display: flex;
   margin: 0px auto;
-  position: relative;
 `;
 
 // 좌측 이미지 감싸는 div 
-const LeftImage = styled.div``;
+const LeftImg = styled.div``;
 
 // 좌측 이미지 스타일 지정
 const TripleLogo = styled.img`
@@ -46,4 +45,4 @@ const TripleLogo = styled.img`
 `;
 
 
-export default section;
+export default LeftImage;

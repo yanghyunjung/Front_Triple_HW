@@ -3,12 +3,12 @@ import styled from "styled-components";
 
 // 사용자, 리뷰, 저장 문구 컴포넌트 구현
 const User = (props) => {
-  // 숫자 증가를 위한 기능구현
+  // 숫자 증가를 위한 기능
   const [count, setCount] = useState({ num_1: 0, num_2: 0, num_3: 0 });
 
   useEffect(() => {
     let number = 0;
-    const interval = setInterval(() => {
+    const interval = setInterval(() => {  // 반복 시작
       number++;
       setCount({
         ...count,
@@ -16,8 +16,8 @@ const User = (props) => {
         num_2: number * 0.105,
         num_3: number * 3.25,
       });
-      if (number === 200) {
-        return clearInterval(interval);
+      if (number === 200) {   // 숫자 올라가는 속도 조절
+        return clearInterval(interval);   // 반복 중단
       }
     });
     return () => clearInterval(interval);

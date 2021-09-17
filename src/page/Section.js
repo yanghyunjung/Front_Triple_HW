@@ -9,19 +9,19 @@ const section = (props) => {
   return (
     <Container>
       {/* 좌측 이미지 불러오기 */}
-      <Left>
+      <LeftImage>
         <LeftImg />
-      </Left>
+      </LeftImage>
 
       {/* 사용자, 리뷰, 저장 문구 불러오기 */}
-      <User delay="0.1">
+      <User>
         <USER />
       </User>
 
       {/* 수상 내역 불러오기 */}
-      <Award delay="0.2">
+      <Awards>
         <AWARD />
-      </Award>
+      </Awards>
     </Container>
   );
 };
@@ -29,7 +29,7 @@ const section = (props) => {
 const Slideup = keyframes`
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(15px);
   }
   to {
     opacity: 1;
@@ -40,37 +40,36 @@ const Slideup = keyframes`
 const Container = styled.div`
   display: flex;
   margin: 0px auto;
-  position: relative;
 `;
 
 // 좌측 이미지 애니메이션 적용
-const Left = styled.div`
-  // 애니메이션이 700ms에 걸쳐 일어나게 지정
-  animation-duration: 700ms;
-  animation-timing-function: ease-in;
-  animation-name: ${Slideup};
-  animation-fill-mode: forwards;
-`;
-
-// 사용자, 리뷰, 저장 문구 애니메이션 적용
-const User = styled.div`
-  // 애니메이션이 700ms에 걸쳐 일어나게 지정
-  animation-duration: 700ms;
-  animation-timing-function: ease-in;
-  animation-delay: ${(props) => props.delay}s;
-  animation-name: ${Slideup};
-  animation-fill-mode: forwards;
-`;
-
-// 수상 내역 애니메이션 적용
-const Award = styled.div`
+const LeftImage = styled.div`
   position: absolute;
   // 애니메이션이 700ms에 걸쳐 일어나게 지정
   animation-duration: 700ms;
   animation-timing-function: ease-in;
-  animation-delay: ${(props) => props.delay}s;
+  animation-delay: 100ms;
   animation-name: ${Slideup};
-  animation-fill-mode: forwards;
+`;
+
+// 사용자, 리뷰, 저장 문구 애니메이션 적용
+const User = styled.div`
+  position: absolute;
+  // 애니메이션이 700ms에 걸쳐 일어나게 지정
+  animation-duration: 700ms;
+  animation-timing-function: ease-in;
+  animation-delay: 200ms;
+  animation-name: ${Slideup};
+`;
+
+// 수상 내역 애니메이션 적용
+const Awards = styled.div`
+  position: absolute;
+  // 애니메이션이 700ms에 걸쳐 일어나게 지정
+  animation-duration: 700ms;
+  animation-timing-function: ease-in;
+  animation-delay: 300ms;
+  animation-name: ${Slideup};
 `;
 
 export default section;
