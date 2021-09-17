@@ -1,4 +1,4 @@
-# Frontend_Homework ✈️
+# Triple_Project ✈️
 
 ### 1. Install Project(프로젝트 셋업)    
 **∙ 리액트 앱 생성 & with yarn**
@@ -66,7 +66,7 @@ yarn start
 
 - **결론은**, useState()를 사용해 상태값을 관리하고 useEffect()로 페이지 렌더링 후 작업이 수행될 수 있게 한다. 그리고 (사용자, 리뷰, 저장)에 해당하는 영역에서 숫자가 증가하는걸 보여주기 위해 {...count, ~}로 각각 객체에 대한 값을 불러와야겠다고 생각함    
 
-### ∙ `바뀐 최종 코드`    
+### ∙ `수정한 최종 코드`    
 ```javascript
 const [count, setCount] = useState({ num_1: 0, num_2: 0, num_3: 0 });
 ```
