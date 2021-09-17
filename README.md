@@ -24,7 +24,9 @@ yarn start
 ```
 
 ### 2. 스택을 구성하는 기술들과 선택한 이유
-- **React**     
+- **React**   
+- **JavaScript**
+    - 자바스크립트로 리액트를 개발할 수 있고 ES6 문법으로 let, const 함수가 사용 가능하고 import 및 export를 함으로써 구성요소를 별도로 재사용 할 수 있다는 점이 좋음     
 - **Styled-Components**
     - Styled-Components 라이브러리를 사용하여 리액트 컴포넌트를 쉽게 만들 수 있음 → 커스텀 마이징이 쉽다
 - **React Hooks → useState(), useEffect()**   
