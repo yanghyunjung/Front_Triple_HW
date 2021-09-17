@@ -1,20 +1,31 @@
 # Frontend_Homework ✈️
 
 ### 1. Install Project(프로젝트 셋업)    
-**∙ With Yarn**
+**∙ 리액트 앱 생성 & with yarn**
 
 ```javascript
-yarn create react-app react_triple
+yarn create react-app react_triple <프로젝트 이름>
+```
+
+**∙ 필요한 패키지 설치**
+
+```javascript
+yarn add styled-components <패키지 이름>
+```
+
+**∙ 프로그램 실행**
+
+```javascript
+yarn start
 ```
 
 ### 2. 스택을 구성하는 기술들과 선택한 이유
-- **React**      
-    - 프로젝트를 할 때마다 사용했기 때문에 가장 익숙한 라이브러리
-- **Styled-Component**
-    - Styled-Components 라이브러리를 사용하여 리액트 컴포넌트를 쉽게 만들 수 있음 → 커스텀 마이징 하기 쉽다
-- **useState(), useEffect()**   
-    - 라이브러리 없이 숫자가 증가하는 기능을 구현하기 위해서 
-    - 한 화면에서만 보여주기 때문에 굳이 리덕스에 넣지 않고 useState()와 useEffect()를 사용했다
+- **React**     
+- **Styled-Components**
+    - Styled-Components 라이브러리를 사용하여 리액트 컴포넌트를 쉽게 만들 수 있음 → 커스텀 마이징이 쉽다
+- **React Hooks → useState(), useEffect()**   
+    - **라이브러리 없이** 숫자가 증가하는 기능을 구현하기 위해서!    
+    - 한 화면에서만 보여주기 때문에 굳이 리덕스에 넣지 않고 React Hooks에서 제공하는 useState()와 useEffect()를 사용했다
 
 ### 3. 프로젝트 관심사
 ✔︎ **CSS 완성도에 집중**    
@@ -30,7 +41,7 @@ yarn create react-app react_triple
     - (좌측 이미지), (사용자, 리뷰, 저장 문구), (수상 내역) 부분을 하나의 JS파일로 구현하지 않고, 각각의 독립적인 컴포넌트로 분리해 추상화 레벨을 일관성 있게 가져갔다
 
 ### 4. Trouble Shooting(트러블 슈팅)   
-### ∙ 맨 위에 보이는 350만명의 사용자 부분 코드
+### ∙ `350만명의 사용자` 부분 코드
 ```javascript
     let numAnimation = document.querySelectorAll('.num_animation');
     let num = 0;
@@ -47,9 +58,9 @@ yarn create react-app react_triple
 
 → **그리고**, 위에처럼 작성하면 21만 개의 리뷰, 650만 개의 저장 부분 코드도 각각 작성해주어야 하기에 코드가 길어져서 가독성이 떨어진다
 
-→ 세 부분(사용자, 리뷰, 저장) 에서 숫자가 증가하는걸 보여주기 위해 {...count, ~)를 사용해서 각각의 값을 불러와야겠다고 생각했다    
+→ 세 부분(사용자, 리뷰, 저장) 에서 숫자가 증가하는걸 보여주기 위해 {...count, ~)를 사용해서 각각 객체에 대한 값을 불러와야겠다고 생각했다    
 
-### ∙ 바뀐 최종 코드    
+### ∙ `바뀐 최종 코드`    
 ```javascript
 const [count, setCount] = useState({ num_1: 0, num_2: 0, num_3: 0 });
 ```
