@@ -14,7 +14,6 @@ const LeftImage = (props) => {
           style={{
             position: "absolute",
             margin: "450px 0 0 230px",
-            fontFamily: "sans-serif",
             color: "rgba(58, 58, 58, 0.7)",
             fontSize: "15px",
             width: "100px",

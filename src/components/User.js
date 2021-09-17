@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 // 사용자, 리뷰, 저장 문구 컴포넌트 구현
 const User = (props) => {
-  // 숫자 증가를 위한 기능
+  // 0부터 증가하기 위해 값을 0으로 초기화
   const [count, setCount] = useState({ num_1: 0, num_2: 0, num_3: 0 });
 
   useEffect(() => {
@@ -11,7 +11,7 @@ const User = (props) => {
     const interval = setInterval(() => {  // 반복 시작
       number++;
       setCount({
-        ...count,
+        ...count,             // 객체에 대한 값을 불러옴
         num_1: number * 1.75,
         num_2: number * 0.105,
         num_3: number * 3.25,
@@ -47,20 +47,22 @@ const Text = styled.div`
   margin-left: 700px;
   padding-top: 170px;
   color: rgb(58, 58, 58);
-  font-family: sans-serif;
   font-size: 36px;
 `;
 
+// 사용자
 const DIV1 = styled.div`
   letter-spacing: -1px;
   margin-bottom: 15px;
 `;
 
+// 리뷰
 const DIV2 = styled.div`
   letter-spacing: -1px;
   margin-bottom: 15px;
 `;
 
+// 저장
 const DIV3 = styled.div`
   letter-spacing: -1px;
   margin-bottom: 15px;

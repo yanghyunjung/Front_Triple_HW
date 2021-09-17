@@ -44,7 +44,6 @@ const Awards = styled.div`
   color: rgba(58, 58, 58, 0.8);
   font-weight: 650;
   font-size: 14px;
-  font-family: sans-serif;
 `;
 
 const StoreLogo = styled.img`
